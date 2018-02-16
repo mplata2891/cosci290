@@ -46,13 +46,12 @@ public class DemoBoolean{
     int numberOfZombies = 3;
     int actualNumberOfZombies = 100;
     
-    if(numberOfZombies == acctualNumberOfZombies){
+    if(numberOfZombies == actualNumberOfZombies){
       System.out.println("You might survive this apocalypse.");
     }
       else{
         System.out.println("You might NOT survive this apocalypse.");
       }
-    }
   
   //Generating a random number 
   //Math.pow(3, 2); 3^2
