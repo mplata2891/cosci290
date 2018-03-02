@@ -12,25 +12,41 @@
 
 public class Player{
 
-  //the Player class has 15 properties
+  //the Player class has 22 properties
   private String firstName;
   private String lastName;
-  private String playerType
   private int age;
+  private String playerType;
+  private int level;
+  private int experience;
+  private int hitPoints;
+  private int lives;
   private int strength;
   private int toughness;
   private int intelligence;
   private int attackModifier;
-  private int armorClass;
-  private int hitPoints;
-  private int lives;
+  private int defenseModifier;
+  private int taskModifier;
+  private int totalAttack;
+  private int totalDefense;
+  private int totalSkill;
   private String weapon;
   private String armor;
   private String itemOne;
   private String itemTwo;
   private String itemThree;
   
-  //the Player class has one constructor
+  /*
+    The Player class has one constructor that sets the values for
+    the following properties:
+        firstName
+        lastName
+        playerType
+        age
+        level
+        experience
+        lives   
+  */
   public Player(String first, String last, String type, int years){
     
     //sets the First Name of the player by assigning the 
@@ -49,6 +65,14 @@ public class Player{
     //of years to the age property
     this.age = years;
     
+    //sets the Player Level that the player starts at by assigning the value
+    //one (1) to the level property
+    this.level = 1;
+    
+    //sets the Experience Points the player starts with by assigning the value
+    //zero (0) to the experience property
+    this.experience = 0;
+    
     //sets the Number of Lives the player starts with by assigning the value
     //three (3) to the lives property
     this.lives = 3;
@@ -64,6 +88,7 @@ public class Player{
     //assigns the value of newValue to strength
     this.strength = newValue;
     
+    //calls setAttackMod method
     setAttackMod();
   }
   
@@ -72,6 +97,9 @@ public class Player{
     
     //assigns the value of newValue to toughness
     this.toughness = newValue;
+    
+    //calls setDefenseModifier method
+    setDefenseModifier();
   }
   
   //method to assign a value to the intelligence property
@@ -79,6 +107,9 @@ public class Player{
     
     //assigns the value of newValue to intelligence
     this.intelligence = newValue;
+    
+    //calls setTaskModifier method
+    setTaskModifier();
   }
   
   //method to assign a value to the weapon property
@@ -120,11 +151,11 @@ public class Player{
     this.attackModifier = ( (this.strength - 10) / 2 );
   }
   
-  //method to assign a value to the armorClass property
-  public void setArmorClass(int newValue){
+  //method to assign a value to the totalDefense property
+  public void setTotalDefense(int newValue){
     
-    //assigns the value of newValue to armorClass
-    this.armorClass = newValue;
+    //assigns the value of newValue to totalDefense
+    this.totalDefense = newValue;
   }
   
   //method to assign a value to the hitPoints property
