@@ -45,8 +45,7 @@ public class Player{
         level
         experience
   */
-  public Player(String first, String last, String type, int years, Weapon weapon,
-               + Armor armor, Item item){
+  public Player(String first, String last, String type, int years, Weapon weapon, Armor armor, Item item){
     
     //sets the First Name of the player by assigning the 
     //value of first to the firstName property
@@ -74,8 +73,16 @@ public class Player{
   }
   
   /*
-    The Player class has 7 public methods
+    The Player class has  methods
   */
+  
+  //method to return the full name of the Player object
+  public String playerName(){
+    
+    //returns a concatenated string consisting of the 
+    //first and last name properties
+    return (this.firstName + " " + this.lastName);
+  }
   
   //method to assign a value to the firstName property
   public void setFirstName(String newFirstName){
@@ -181,8 +188,8 @@ public class Player{
     //assigns the value of newValue to strength
     this.strength = newValue;
     
-    //calls setAttackMod method
-    setAttackMod(this.strength);
+    //calls setAttackModifier method
+    setAttackModifier(this.strength);
   }
   
   //method to return the value of the strength property
@@ -229,21 +236,21 @@ public class Player{
   //method to compute the modifier of a player's attribute,
   //i.e. the bonus a player receives from strength, toughness,
   //and intelligence
-  private protected int computeModifier(int attributeValue){
+  private int computeModifier(int attributeValue){
     
     //returns the value of the calculation
     return ((attributeValue - 10) / 2);
   }
   
   //method to assign a value to the attackModifier property
-  private protected void setAttackModifier(int newValue){
+  private void setAttackModifier(int newValue){
     
     //calls the computeModifier method, passing the value of
     //newValue. value returned by method is assigned to attackModifier
     this.attackModifier = computeModifier(newValue);
     
     //calls the setTotalAttack method
-    setTotalAttack(this.weapon.atkMod, this.attackModifier);
+    setTotalAttack(this.weapon.getAtkMod, this.attackModifier);
   }
   
   //method to return the value of the attackModifier property
@@ -254,7 +261,7 @@ public class Player{
   }
   
   //method to assign a value to the defenseModifier property
-  private protected void setDefenseModifier(int newValue){
+  private void setDefenseModifier(int newValue){
     
     //calls the computeModifier method, passing the value of
     //newValue. value returned by method is assigned to defenseModifier
@@ -272,7 +279,7 @@ public class Player{
   }
   
   //method to assign a value to the skillModifier property
-  private protected void setSkillModifier(int newValue){
+  private void setSkillModifier(int newValue){
     
     //calls the computeModifier method, passing the value of
     //newValue. value returned by method is assigned to skillModifier
@@ -293,32 +300,33 @@ public class Player{
   public void setWeapon(Weapon currentWeapon, Weapon newWeapon){
     
     //calls unequipCurrentWeapon method
-    unequipCurrentWeapon(currentWeapon.atkMod, this.attackModifier);
+    unequipCurrentWeapon(currentWeapon.getAtkMod, this.attackModifier);
     
     //calls equipNewWeapon method
-    equipNewWeapon(newWeapon.atkMod, this.attackModifier);
+    equipNewWeapon(newWeapon.getAtkMod, this.attackModifier);
   }
   
   //method for removing the current weapon's attack modifier value (weapon.atkMod)
   //from the value of the totalAttack property
-  private protected void unequipCurrentWeapon(int currentWeaponAtk, int atkMod){
+  private void unequipCurrentWeapon(int currentWeaponAtk, int atkMod){
     
     //calls the setTotalAttack method
-    setTotalAttack(-currentWeaponAtk, atkMod);
+    setTotalAttack((-currentWeaponAtk), atkMod);
   }
   
   //method for adding the new weapon's attack modifier value (weapon.atkMod)
   //to the value of the totalAttack property
-  private protected void equipNewWeapon(Weapon newWeapon, int newWeaponAtk, int atkMod){
+  private void equipNewWeapon(Weapon newWeapon, int newWeaponAtk, int atkMod){
     
     //assigns the value of newWeapon to weapon
     this.weapon = newWeapon;
     
+    //calls the setTotalAttack method
     setTotalAttack(newWeaponAtk, atkMod);
   }
   
   //method to return the value of the weapon property
-  public void getWeapon(){
+  public Weapon getWeapon(){
     
     //returns the value of the weapon property
     return this.weapon;
@@ -328,10 +336,10 @@ public class Player{
   public void setArmor(Armor currentArmor, Armor newArmor){
     
     //calls unequipCurrentArmor method
-    unequipCurrentArmor(currentArmor.defMod, this.defenseModifier);
+    unequipCurrentArmor(currentArmor.getDefMod, this.defenseModifier);
     
     //calls equipNewArmor method
-    equipNewArmor(newArmor.defMod, this.defenseModifier);
+    equipNewArmor(newArmor.getDefMod, this.defenseModifier);
     
     //assigns the value of newArmor to armor
     this.armor = newArmor;
@@ -339,21 +347,22 @@ public class Player{
   
   //method for removing the current armor's defense modifier value (armor.defMod)
   //from the value of the totalDefense property
-  private protected void unequipCurrentArmor(int currentArmorDef, int defMod){
+  private void unequipCurrentArmor(int currentArmorDef, int defMod){
     
     //calls the setTotalDefense method
-    setTotalDefense(-currentArmorDef, defMod);
+    setTotalDefense((-currentArmorDef), defMod);
   }
   
   //method for adding the new armor's defense modifier value (armor.defMod)
   //to the value of the totalDefense property
-  private protected void equipNewArmor(int newArmorDef, int defMod){
+  private void equipNewArmor(int newArmorDef, int defMod){
     
+    //calls the setTotalArmor method
     setTotalArmor(newArmorDef, defMod);
   }
   
   //method to return the value of the armor property
-  public void getArmor(){
+  public Armor getArmor(){
     
     //returns the value of the armor property
     return this.armor;
@@ -362,12 +371,18 @@ public class Player{
   //method to assign a value to the itemOne property
   public void setItemOne(Item oldItem, Item newItem){
     
-    //assigns the value of newItem to itemOne
+    //calls unequipCurrentItem method
+    unequipCurrentItem(oldItem);
+    
+    //calls equipNewItem method
+    equipNewItem(newItem);
+    
+    //assigns the newItem object to the itemOne property
     this.itemOne = newItem;
   }
   
   //method to return the value of the itemOne property
-  public void getItemOne(){
+  public Item getItemOne(){
     
     //returns the value of the itemOne property
     return this.itemOne;
@@ -376,12 +391,18 @@ public class Player{
   //method to assign a value to the itemTwo property
   public void setItemTwo(Item oldItem, Item newItem){
     
-    //assigns the value of newItem to itemTwo
+    //calls unequipCurrentItem method
+    unequipCurrentItem(oldItem);
+    
+    //calls equipNewItem method
+    equipNewItem(newItem);
+    
+    //assigns the newItem object to the itemOne property
     this.itemTwo = newItem;
   }
   
   //method to return the value of the itemTwo property
-  public void getItemTwo(){
+  public Item getItemTwo(){
     
     //returns the value of the itemTwo property
     return this.itemTwo;
@@ -390,25 +411,109 @@ public class Player{
   //method to assign a value to the itemThree property
   public void setItemThree(Item oldItem, Item newItem){
     
-    //assigns the value of newItem to itemThree
+    //calls unequipCurrentItem method
+    unequipCurrentItem(oldItem);
+    
+    //calls equipNewItem method
+    equipNewItem(newItem);
+    
+    //assigns the newItem object to the itemOne property
     this.itemThree = newItem;
   }
   
   //method to return the value of the itemThree property
-  public void getItemThree(){
+  public Item getItemThree(){
     
     //returns the value of the itemThree property
     return this.itemThree;
   }
   
-  private protected void setTotalAttack(int weaponAttack, int attackMod){
+  //method for removing the current Item's attribute modifier values
+  //from the player's current attribute values
+  private void unequipCurrentItem(Item currentItem){
     
+    //calls removeAttributeModifiers method
+    removeAttributeModifiers(currentItem);
+  }
+  
+  //method for adding the new Item's attribute modifier values
+  //to the player's base attribute values, then updates the
+  //attack, defense, and skill modifiers
+  private void equipNewItem(Item newItem){
+    
+    //calls the applyAttributeModifiers method
+    applyAttributeModifiers(newItem);
+    
+    //calls the setAttackModifier method
+    setAttackModifier(this.strength);
+    
+    //calls the setDefenseModifier method
+    setDefenseModifier(this.toughness);
+    
+    //calls the setSkillModifier method
+    setSkillModifier(this.intelligence);
+  }
+  
+  //method that subtracts the current item's attribute modifier values
+  //from the players current attribute values
+  private void removeAttributeModifiers(Item currentItem){
+    
+    //subtracts the current item's strength modifier from the
+    //player's current strength
+    this.strength -= currentItem.getStrMod;
+    
+    //subtracts the current item's toughness modifier from the
+    //player's current toughness
+    this.toughness -= currentItem.getTufMod;
+    
+    //subtracts the current item's intelligence modifier from the
+    //player's current intelligence
+    this.intelligence -= currentItem.getSklMod;
+  }
+  
+  //method that adds the new item's attribute modifier values
+  //to the players base attribute values
+  private void applyAttributeModifiers(Item newItem){
+    
+    //adds the new item's strength modifier to the player's
+    //base strength
+    this.strength += currentItem.getStrMod;
+    
+    //adds the new item's toughness modifier to the player's
+    //base toughness
+    this.toughness += currentItem.getTufMod;
+    
+    //adds the new item's intelligence modifier to the player's
+    //base intelligence
+    this.intelligence += currentItem.getSklMod;
+  }
+  
+  //method to set the totalAttack property of the player
+  private void setTotalAttack(int weaponAttack, int attackMod){
+    
+    //calculates a value and assigns that value to totalAttack
     this.totalAttack = weaponAttack + attackMod;
   }
   
-  private protected void setTotalDefense(int armorDefense, int defenseModifier){
+  //method to return the valur of the totalAttack property
+  public int getTotalAttack(){
     
+    //returns the value of the totalAttack property
+    return totalAttack;
+  }
+  
+  //method to set the totalDefense property of the player
+  private void setTotalDefense(int armorDefense, int defenseModifier){
+    
+    //calculates a value and assigns that value to totalDefense
     this.totalDefense = armorDefense + defenseModifier;
+  }
+  
+   //method to return the valur of the totalDefense property
+  public int getTotalDefense(){
+    
+    //returns the value of the totalDefense property
+    return totalDefense;
   }
   
 
