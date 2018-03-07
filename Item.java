@@ -15,7 +15,7 @@ public class Item{
   private int sklMod;
   
   //the Item class has 1 defualt constructor
-  public Armor(){
+  public Item(){
 
     //assigns the indicated String to the name property
     this.name = "None";
@@ -31,7 +31,7 @@ public class Item{
   }
   
   //the Armor class has 1 constructor with parameters
-  public Armor(String name, int strValue, int tufValue, int sklValue){
+  public Item(String name, int strValue, int tufValue, int sklValue){
     
     //assigns the indicated String to the name property 
     this.name = name;

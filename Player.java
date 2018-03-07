@@ -6,8 +6,6 @@
   text adventure. This is based of
   off a character sheet from the 
   legendary game - Dungeons and Dragons.
-  
-  creat a toString method() for name
 */
 
 public class Player{
@@ -250,7 +248,7 @@ public class Player{
     this.attackModifier = computeModifier(newValue);
     
     //calls the setTotalAttack method
-    setTotalAttack(this.weapon.getAtkMod, this.attackModifier);
+    setTotalAttack(this.weapon.getAtkMod(), this.attackModifier);
   }
   
   //method to return the value of the attackModifier property
@@ -268,7 +266,7 @@ public class Player{
     this.defenseModifier = computeModifier(newValue);
     
     //calls the setTotalDefense method
-    setTotalDefense(this.defenseModifier);
+    setTotalDefense(this.armor.getDefMod(), this.defenseModifier);
   }
   
   //method to return the value of the defenseModifier property
@@ -286,7 +284,7 @@ public class Player{
     this.skillModifier = computeModifier(newValue);
     
     //calls the setTotalSkill method
-    setTotalSkill(this.skillModifier);
+    setTotalSkill();
   }
   
   //method to return the value of the skillModifier property
@@ -300,10 +298,10 @@ public class Player{
   public void setWeapon(Weapon currentWeapon, Weapon newWeapon){
     
     //calls unequipCurrentWeapon method
-    unequipCurrentWeapon(currentWeapon.getAtkMod, this.attackModifier);
+    unequipCurrentWeapon(currentWeapon.getAtkMod(), this.attackModifier);
     
     //calls equipNewWeapon method
-    equipNewWeapon(newWeapon.getAtkMod, this.attackModifier);
+    equipNewWeapon(newWeapon, newWeapon.getAtkMod(), this.attackModifier);
   }
   
   //method for removing the current weapon's attack modifier value (weapon.atkMod)
@@ -336,10 +334,10 @@ public class Player{
   public void setArmor(Armor currentArmor, Armor newArmor){
     
     //calls unequipCurrentArmor method
-    unequipCurrentArmor(currentArmor.getDefMod, this.defenseModifier);
+    unequipCurrentArmor(currentArmor.getDefMod(), this.defenseModifier);
     
     //calls equipNewArmor method
-    equipNewArmor(newArmor.getDefMod, this.defenseModifier);
+    equipNewArmor(newArmor.getDefMod(), this.defenseModifier);
     
     //assigns the value of newArmor to armor
     this.armor = newArmor;
@@ -358,7 +356,7 @@ public class Player{
   private void equipNewArmor(int newArmorDef, int defMod){
     
     //calls the setTotalArmor method
-    setTotalArmor(newArmorDef, defMod);
+    setTotalDefense(newArmorDef, defMod);
   }
   
   //method to return the value of the armor property
@@ -460,15 +458,15 @@ public class Player{
     
     //subtracts the current item's strength modifier from the
     //player's current strength
-    this.strength -= currentItem.getStrMod;
+    this.strength -= currentItem.getStrMod();
     
     //subtracts the current item's toughness modifier from the
     //player's current toughness
-    this.toughness -= currentItem.getTufMod;
+    this.toughness -= currentItem.getTufMod();
     
     //subtracts the current item's intelligence modifier from the
     //player's current intelligence
-    this.intelligence -= currentItem.getSklMod;
+    this.intelligence -= currentItem.getSklMod();
   }
   
   //method that adds the new item's attribute modifier values
@@ -477,15 +475,15 @@ public class Player{
     
     //adds the new item's strength modifier to the player's
     //base strength
-    this.strength += currentItem.getStrMod;
+    this.strength += newItem.getStrMod();
     
     //adds the new item's toughness modifier to the player's
     //base toughness
-    this.toughness += currentItem.getTufMod;
+    this.toughness += newItem.getTufMod();
     
     //adds the new item's intelligence modifier to the player's
     //base intelligence
-    this.intelligence += currentItem.getSklMod;
+    this.intelligence += newItem.getSklMod();
   }
   
   //method to set the totalAttack property of the player
@@ -514,6 +512,20 @@ public class Player{
     
     //returns the value of the totalDefense property
     return totalDefense;
+  }
+  
+  //method to set the totalSkill property
+  private void setTotalSkill(){
+    
+    //sets the value of the totalSkill property
+    this.totalSkill = this.skillModifier;
+  }
+  
+  //method to return the value of the totalSkill property
+  public int getTotalSkill(){
+    
+    //returns the value of the totalSkill property
+    return totalSkill;
   }
   
 
