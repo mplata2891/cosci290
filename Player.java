@@ -10,10 +10,17 @@
 
 public class Player{
 
+	
+	//player can extend human
+	
+	//modifiers can be part of an interface that player implements
+	
+	
   //the Player class has 21 properties
   private String firstName;
   private String lastName;
   private int age;
+  
   private String playerType;
   private int level;
   private int experience;
@@ -21,14 +28,18 @@ public class Player{
   private int strength;
   private int toughness;
   private int intelligence;
+  
+  //interface
   private int attackModifier;
   private int defenseModifier;
   private int skillModifier;
+  
   private Weapon weapon;
   private Armor armor;
   private Item itemOne;
   private Item itemTwo;
   private Item itemThree;
+  
   private int totalAttack;
   private int totalDefense;
   private int totalSkill;
