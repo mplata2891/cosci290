@@ -43,7 +43,7 @@ public class Player{
         level
         experience
   */
-  public Player(String first, String last, String type, int years, Weapon weapon, Armor armor, Item item){
+  public Player(String first, String last, String type, int years){
     
     //sets the First Name of the player by assigning the 
     //value of first to the firstName property
@@ -71,7 +71,7 @@ public class Player{
   }
   
   /*
-    The Player class has  methods
+    The Player class has lots of methods
   */
   
   //method to return the full name of the Player object
