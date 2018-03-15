@@ -20,9 +20,7 @@
   	private int totalSkill;
  */
 
-public class Player extends Human
-
-public class Player{	
+public class Player extends Player{	
 	
 	//the Player class has 8 class members/properties
 	private String playerType;
@@ -63,14 +61,8 @@ public class Player{
 	}
   
 	/*
-	The Player class has lots of methods
+	The Player class has 17 public methods
 	*/
-	
-	//print (to screen) all class members with appropriate labels
-	public void printPlayer() {
-		
-		
-	}
 	  
 	//method to assign a value to the playerType property
 	public void setPlayerType(String newType){
@@ -147,9 +139,6 @@ public class Player{
 	    
 		//assigns the value of newValue to strength
 		this.strength = newValue;
-	    
-		//calls setAttackModifier method
-		setAttackModifier(this.strength);
 	}
 	  
 	//method to return the value of the strength property
@@ -165,8 +154,6 @@ public class Player{
 		//assigns the value of newValue to toughness
 		this.toughness = newValue;
 		    
-		//calls setDefenseModifier method
-		setDefenseModifier(this.toughness);
 	}
 	  
 	//method to return the value of the toughness property
@@ -181,9 +168,6 @@ public class Player{
 	    
 		//assigns the value of newValue to intelligence
 		this.intelligence = newValue;
-		    
-		//calls setSkillModifier method
-		setSkillModifier(this.intelligence);
 	}
 	  
 	//method to return the value of the intelligence property
@@ -191,6 +175,20 @@ public class Player{
 	    
 		//retrurns the value of the intelligence property
 		return this.intelligence;
+	}
+	
+	//method to return object fields as a string
+	public String toString() {
+		
+		//returns object fields as a string
+		return ("Class: " + this.playerType + "\n"
+				+ "Level: " + this.level + "\n"
+				+ "  Exp: " + this.experiencePoints + "\n"
+				+ "   SP: " + this.skillPoints + "\n"
+				+ "   HP: " + this.hitPoints + "\n"
+				+ "  Str: " + this.strength + "\n"
+				+ "  Tuf: " + this.toughness + "\n"
+				+ "  Int: " + this.intelligence + "\n\n");
 	}
   
 /*
