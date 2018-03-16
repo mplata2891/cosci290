@@ -2,7 +2,7 @@
 	Mike Plata
 	CoSci 290
 	
-	Human Class
+	Person class is an abstract class
 */
 
 public class Person extends GamePiece{
