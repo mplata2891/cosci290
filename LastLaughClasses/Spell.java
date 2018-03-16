@@ -25,6 +25,7 @@ public class Spell{
 		this.description = "N/A"
 	}
 	
+<<<<<<< HEAD
 	//method to assign a value to the name property
 	public void setName(String newName) {
 		
@@ -74,5 +75,60 @@ public class Spell{
 		return ("Name: " + this.name + "\n"
 				+ "Type: " + this.type + "\n"
 				+ "Description: " + this.description + "\n\n");
+=======
+	//method to print (to screen) each class member with appropriate labels
+	public void printSpell() {
+		
+		//prints the name property
+		System.out.println("Name: " + this.name);
+		
+		//prints the type property
+		System.out.println("Type: " + this.type);
+		
+		//prints the description property
+		System.out.println("Description: " + this.description);
+	}
+	
+	//method to assign a value to the name property
+	public void setName(String newName) {
+		
+		//assigns the value of newName to the name property
+		this.name = newName;
+	}
+	
+	//method to return the value ot the name property
+	public String getName() {
+		
+		//returns the value of the name property
+		return this.name;
+	}
+	
+	//method to assign a value to the type property
+	public void setType(String newType) {
+		
+		//assigns the value of newType to the type property
+		this.type = newType;
+	}
+	
+	//method to return the value of the type property
+	public String getType() {
+		
+		//returns the value of the type property
+		return this.type;
+	}
+	
+	//method to assign a value to the description property
+	public void setDescription(String newDescription) {
+		
+		//assigns the value of newDescription to the description property
+		this.description = newDescription;
+	}
+	
+	//method to return the value of the description property
+	public String getDescription() {
+		
+		//returns the value of the description property
+		return this.description
+>>>>>>> branch 'master' of https://github.com/mplata2891/cosci290.git
 	}
 }
