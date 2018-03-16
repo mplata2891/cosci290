@@ -2,7 +2,9 @@
 	Mike Plata
 	CoSci 290
 
-	Mystical Blast class
+	Mystical Blast class is an extension of Spell
+	Mystical blast can by cast by a MagicUser
+	Mystical blast is a high attack
 */
 
 public class MysticalBlast extends Spell{
