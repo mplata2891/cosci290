@@ -2,7 +2,10 @@
 	Mike Plata
 	CoSci 290
 
-	Fighter Class
+	Fighter Class is an extension of Player
+	Fighter class is good at hand to hand
+	combat, but not as good with solving 
+	puzzles.
 */
 
 public class Fighter extends Player{
@@ -94,5 +97,26 @@ public class Fighter extends Player{
 		    
 		//returns the value of the storedItem property
 		return this.storedItem;
+	}
+	
+	public String toString() {
+		
+		return ("First Name: " + super.firstName + "\n"
+				+ "Last Name: " + super.lastName + "\n"
+				+ "  Age: " + super.age + "\n"
+				+ "Class: " + super.playerType + "\n"
+				+ "Level: " + super.level + "\n"
+				+ "  Exp: " + super.experiencePoints + "\n"
+				+ "   SP: " + super.skillPoints + "\n"
+				+ "   HP: " + super.hitPoints + "\n"
+				+ "  Str: " + super.strength + "\n"
+				+ "  Tuf: " + super.toughness + "\n"
+				+ "  Int: " + super.intelligence + "\n"
+				+ "Weapon: " + this.equipedWeapon + "\n"
+				+ "Sheathed Weapons: " + this.sheathedWeapons[0]
+						+ ", " + this.sheathedWeapons[1] + "\n"
+				+ " Armor: " + this.equipedArmor + "\n"
+				+ "Active Item: " + this.activeItem + "\n"
+				+ "Stored Item: " + this.storedItem + "\n\n");
 	}
 }

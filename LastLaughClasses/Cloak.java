@@ -2,7 +2,9 @@
 	Mike Plata
 	CoSci 290
 
-	Cloak class
+	Cloak class is an extension of the armor class
+	Cloak is an armor used by the Class MagicUser
+	Cloak provides light protection against attacks
 */
 
 public class Cloak extends Armor{

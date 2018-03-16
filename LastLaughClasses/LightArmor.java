@@ -2,7 +2,9 @@
 	Mike Plata
 	CoSci 290
 
-	LightArmor class
+	LightArmor class is an extension of the Armor class
+	Light Armor is used by the Fighter class
+	Light Armor has high defense
 */
 
 public class LightArmor extends Armor{

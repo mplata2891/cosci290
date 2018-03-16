@@ -2,8 +2,8 @@
   Mike Plata
   CoSci 290
   
-  sample of an Armor class for Text Adventure
-  to be used by the Player class
+  Armor is an abstract class that will be inherited
+  by other 'specific Armor subclasses
 */
 
 public class Armor extends GamePiece{
@@ -68,10 +68,10 @@ public class Armor extends GamePiece{
 		return this.defense;
 	}
 	
-	//method to print (to screen) all class members with appropriate labels
+	//method to return the object members as a string
 	public String toString() {
 		
-		//print to screen the name property
+		//returns object members as a string
 		return ("Name: " + this.name + "\n"
 				+ "Type: " + this.type + "\n"
 				+ " Def: " + this.defense "\n\n");

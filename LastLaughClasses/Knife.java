@@ -2,7 +2,8 @@
 	Mike Plata
 	CoSci 290
 
-	Knife Class
+	Knife Class is an extension of the Weapon class
+	The knife is a moderate damage weapon
 */
 
 public class Knife extends Weapon{

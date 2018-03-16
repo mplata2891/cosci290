@@ -2,7 +2,9 @@
 	Mike Plata
 	CoSci 290
 
-	LeatherArmor class
+	LeatherArmor class is an extension of the Armor class
+	LeahterArmor is used by the Rogue class
+	Leather Armor has moderate defense
 */
 
 public class LeatherArmor extends Armor{
