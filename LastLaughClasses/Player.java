@@ -181,7 +181,10 @@ public class Player extends Player{
 	public String toString() {
 		
 		//returns object fields as a string
-		return ("Class: " + this.playerType + "\n"
+		return ("First Name: " + super.firstName + "\n"
+				+ "Last Name: " + super.lastName + "\n"
+				+ "  Age: " + super.age + "\n"
+				+ "Class: " + this.playerType + "\n"
 				+ "Level: " + this.level + "\n"
 				+ "  Exp: " + this.experiencePoints + "\n"
 				+ "   SP: " + this.skillPoints + "\n"
