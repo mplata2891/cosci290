@@ -5,7 +5,6 @@
 	Sword Class
 */
 
-<<<<<<< HEAD
 public class Sword extends Weapon{
 	
 	public Sword() {
@@ -18,21 +17,5 @@ public class Sword extends Weapon{
 		
 		//assigns a value to the attack property
 		super.attack = 8;
-=======
-public class Sword extends Weapon
-
-public class Sword{
-	
-	public Sword() {
-		
-		//assigns a value to the name property
-		this.name = "Sword";
-		
-		//assigns a value to the type property
-		this.type = "Sword";
-		
-		//assigns a value to the attack property
-		this.attack = 8;
->>>>>>> branch 'master' of https://github.com/mplata2891/cosci290.git
 	}
 }
