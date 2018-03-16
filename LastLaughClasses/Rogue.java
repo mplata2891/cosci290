@@ -88,5 +88,28 @@ public class Rogue extends Player{
 			//returns the value of the equipedArmor property
 			return this.equipedArmor;
 		}
+		
+		public String toString() {
+			
+			return ("First Name: " + super.firstName + "\n"
+					+ "Last Name: " + super.lastName + "\n"
+					+ "  Age: " + super.age + "\n"
+					+ "Class: " + super.playerType + "\n"
+					+ "Level: " + super.level + "\n"
+					+ "  Exp: " + super.experiencePoints + "\n"
+					+ "   SP: " + super.skillPoints + "\n"
+					+ "   HP: " + super.hitPoints + "\n"
+					+ "  Str: " + super.strength + "\n"
+					+ "  Tuf: " + super.toughness + "\n"
+					+ "  Int: " + super.intelligence + "\n"
+					+ "Weapon: " + this.equipedWeapon + "\n"
+					+ "Sheathed Weapon: " + this.sheathedWeapon + "\n"
+					+ " Armor: " + this.equipedArmor + "\n"
+					+ "Active Items: " + this.activeItem[0]
+							+ ", " + this.activeItem[1]
+					+ "Stored Item: " + this.storedItem[0]
+							+ ", " + this.storedItem[1]
+							+ ", " + this.storedItem[2] + "\n\n");
+		}
 
 }
