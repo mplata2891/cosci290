@@ -38,6 +38,7 @@ public class TestClass{
 		it1.setTufMod(2);
 		it1.setSklMod(3);
 
-		list<2>.toString;
+		it1.toString();
+		//list<2>.toString();
 	}
 }
