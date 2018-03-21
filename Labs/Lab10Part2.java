@@ -4,12 +4,41 @@
 	Lab10-Part2
 */
 
-public class Lab10-Part2{
+import java.util.Scanner;
+public class Lab10Part2{
 	
+	//entry point of application
 	public static void main(String[] args){
 		
+		//declare and instantiate an object of type array
+		double arrayOfDoubles[] = new double[10];
 		
+		//declare and initialize variables needed
+		double average = 0;
+		
+		//call displayDescription method
+		displayDescription();
+		
+		//call takeValues method
+		takeValues(arrayOfDoubles);
+		
+		//call average method
+		average = average(arrayOfDoubles);
+		
+		//display average value to user
+		System.out.println("The average value of the numbers is: " + average + ".\n");
 	}
+
+/*
+	method to display a brief description of what the
+	program does, to the user
+*/
+public static void displayDescription(){
+	
+	//prints description to the user
+	System.out.println("Hello user! This program allows you to enter ten\n"
+						+ "real numbers. The program will then display the\n"
+						+ "average value of all the numbers entered\n");
 }
 
 /*
@@ -24,7 +53,7 @@ public static void takeValues(int[] array){
 	
 	//initiates for loop to prompt user for
 	//input and store input in array
-	for(int i = 0; i < 10; i++){
+	for(int i = 0; i < array.length; i++){
 		
 		//prompts user for input
 		System.out.print("Please enter a whole number: ");
@@ -50,7 +79,7 @@ public static void takeValues(double[] array){
 	
 	//initiates for loop to prompt user for
 	//input and store input in array
-	for(int i = 0; i < 10; i++){
+	for(int i = 0; i < array.length; i++){
 		
 		//prompts user for input
 		System.out.print("Please enter a whole number: ");
@@ -76,7 +105,7 @@ public static int average(int[] array){
 	
 	//initiates for loop to prompt user for
 	//input and store input in array
-	for(int i = 0; i < 10; i++){
+	for(int i = 0; i < array.length; i++){
 		
 		//sums all values in array and saves total
 		total += array[i];
@@ -98,7 +127,7 @@ public static double average(double[] array){
 	
 	//initiates for loop to prompt user for
 	//input and store input in array
-	for(int i = 0; i < 10; i++){
+	for(int i = 0; i < array.length; i++){
 		
 		//sums all values in array and saves total
 		total += array[i];
@@ -106,4 +135,5 @@ public static double average(double[] array){
 	}
 	
 	return total / 10; //returns calculated value
+}
 }
