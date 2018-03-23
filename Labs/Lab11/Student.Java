@@ -11,7 +11,7 @@ public class Student extends Person{
   //Student has 3 class members/fields
   private String major;
   private int gpa;
-  private String[] classes;
+  private ArrayList<String> classes;
 
   //default constructor
   public Student(){
@@ -24,7 +24,7 @@ public class Student extends Person{
 
     //creates a new array of type String and assigns it to the
     //classes field
-    this.classes = new String[];
+    this.classes = new ArrayList<>();
   }
 
   //method to return the value of the major field
@@ -59,14 +59,15 @@ public class Student extends Person{
   public String getClasses(){
 
     //returns the value of the classes field
-    return this.classes[];
+    return ;
   }
 
   //method to set the value of the classes field
-  public void setClasses(){
+  public void setClasses(String newClass){
 
-    //returns the value of the classes field
-    return this.classes[];
+    //adds the value of newClass to a new index at
+    //the end of the ArrayList
+    classes.add(newClass);
   }
 
   //method to create a string representation of
@@ -80,6 +81,6 @@ public class Student extends Person{
             + "       Age: " + super.getAge() + + "\n"
             + "    Gender: " + super.getGender() + "\n"
             + "     Major: " + this.major + "\n"
-            + "       GPA: " + this.age + "\n"
+            + "       GPA: " + this.age + "\n";
   }
 }
