@@ -24,7 +24,7 @@ public class Person{
     this.age = 23;
 
     //sets the indicated string as the value of the gender field
-    this.gender = "Unknown"
+    this.gender = "Unknown";
   }
 
   //method to return the value of the firstName field
@@ -66,7 +66,7 @@ public class Person{
   public void setAge(String newAge){
 
     //sets the value of newAge to the age field
-    this.firstName = newName;
+    this.firstName = newAge;
   }
 
   //method to return the value of the gender field
@@ -91,7 +91,7 @@ public class Person{
     return "Person - \n"
             + "First Name: " + this.firstName + "\n"
             + " Last Name: " + this.lastName + "\n"
-            + "       Age: " + this.age + + "\n"
+            + "       Age: " + this.age +  "\n"
             + "    Gender: " + this.gender + "\n\n";
   }
 }

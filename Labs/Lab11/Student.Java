@@ -3,6 +3,7 @@
   CoSci290
 */
 
+import java.util.ArrayList;
 public class Student extends Person{
 
   //Student has 4 inherited fields from Person
@@ -10,17 +11,17 @@ public class Student extends Person{
 
   //Student has 3 class members/fields
   private String major;
-  private int gpa;
+  private double gpa;
   private ArrayList<String> classes;
 
   //default constructor
   public Student(){
 
     //sets the indicated string as the value of the major fields
-    this.major = "Computer Science"
+    this.major = "Computer Science";
 
-    //sets the valud of the gpa field to the given value
-    this.int = 3.2
+    //sets the value of the gpa field to the given value
+    this.gpa = 3.2;
 
     //creates a new array of type String and assigns it to the
     //classes field
@@ -42,24 +43,24 @@ public class Student extends Person{
   }
 
   //method to return the value of the gpa field
-  public int getGpa(){
+  public double getGpa(){
 
     //returns the value of the gpa field
     return this.gpa;
   }
 
   //method to set the value of the gpa field
-  public void setGpa(int newGpa){
+  public void setGpa(double newGpa){
 
     //sets the value of newGpa to the gpa field
     this.gpa = newGpa;
   }
 
   //method to return the value of the classes field
-  public String getClasses(){
+  public ArrayList<String> getClasses(){
 
     //returns the value of the classes field
-    return ;
+    return this.classes;
   }
 
   //method to set the value of the classes field
@@ -78,9 +79,9 @@ public class Student extends Person{
     return "Student - \n"
             + "First Name: " + super.getFirstName() + "\n"
             + " Last Name: " + super.getLastName() + "\n"
-            + "       Age: " + super.getAge() + + "\n"
+            + "       Age: " + super.getAge() + "\n"
             + "    Gender: " + super.getGender() + "\n"
             + "     Major: " + this.major + "\n"
-            + "       GPA: " + this.age + "\n";
+            + "       GPA: " + this.gpa + "\n";
   }
 }
