@@ -56,7 +56,7 @@ public class Cat extends GamePiece{
   }
 
   //method to return the value of the size field
-  public int size(){
+  public int getSize(){
 
     //returns the value of the size field
     return this.size;
