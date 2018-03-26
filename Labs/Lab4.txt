@@ -1,0 +1,13 @@
+Lab 04 Description: Sign up for http://codingbat.com/java/
+                    Please keep username and password because we will use this
+                    again.
+
+                    Do problems: sleepIn
+                                monkeyTrouble
+                                sumDouble
+                                diff21
+                                parrotTrouble
+
+                    Extra Credit: cigarParty
+
+Status: ALL COMPLETED
