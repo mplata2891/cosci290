@@ -12,8 +12,8 @@
                       adventure. Based on the demo/lecture, print out your
                       ascii art to the console.
 
-Edited on 3/25 by adding comments. -MP
-/*
+  Edited on 3/25 by adding comments. -MP
+
   This application is a demo to test different
   printout statements.
 */

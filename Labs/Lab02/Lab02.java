@@ -1,9 +1,9 @@
 /*
   Mike Plata
   CoSci 290
-  Lab 02 (mistakenly labeled Lab 01. Lab 01 found on TestPrint.java)
+  Lab 01
 
-  Lab 02 Instructions: Based on the lecture/demo on 02/15/18, use Scanner to
+  Lab 01 Instructions: Based on the lecture/demo on 02/15/18, use Scanner to
                       prompt the user for 3 to 4 questions that would set up
                       the start of your text adventure.
 
@@ -11,7 +11,7 @@
  */
 
 import java.util.Scanner;
-public class Lab01{
+public class Lab02{
 
   //entry point of main application
   public static void main(String[] args){

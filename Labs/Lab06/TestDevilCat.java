@@ -36,7 +36,7 @@ public class TestDevilCat{
     //instantiate and declare a new object of type DevilCat
     DevilCat dCat01 = new DevilCat();
 
-    //print out the object by calling the toString method inside
+    //prints out the object by calling the toString method inside
     //a print method
     System.out.print(dCat01.toString());
   }
