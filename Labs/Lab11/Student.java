@@ -12,7 +12,7 @@ public class Student extends Person{
   //Student has 3 class members/fields
   private String major;
   private double gpa;
-  private ArrayList<String> classes;
+  private ArrayList<Course> classes;
 
   //default constructor
   public Student(){
@@ -57,18 +57,18 @@ public class Student extends Person{
   }
 
   //method to return the value of the classes field
-  public ArrayList<String> getClasses(){
+  public ArrayList<Course> getClasses(){
 
     //returns the value of the classes field
     return this.classes;
   }
 
   //method to set the value of the classes field
-  public void setClasses(String newClass){
+  public void setClasses(Course newCourse){
 
-    //adds the value of newClass to a new index at
+    //adds the value of newCourse to a new index at
     //the end of the ArrayList
-    classes.add(newClass);
+    classes.add(newCourse);
   }
 
   //method to create a string representation of
