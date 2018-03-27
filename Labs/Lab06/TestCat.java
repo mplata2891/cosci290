@@ -37,6 +37,6 @@ public class TestCat{
     Cat Cat01 = new Cat();
 
     //call the Cat class toString method
-    Cat01.toString();  
+    System.out.print(Cat01.toString());  
   }
 }

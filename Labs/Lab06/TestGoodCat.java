@@ -36,7 +36,8 @@ public class TestGoodCat{
     //instantiate and declare a new object of type GoodCat
     GoodCat gCat01 = new GoodCat();
 
-    //call the GoodCat class toString method
-    gCat01.toString();
+    //print out the object by calling the toString method inside
+    //a print method
+    System.out.print(gCat01.toString());
   }
 }
