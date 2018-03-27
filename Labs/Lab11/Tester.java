@@ -33,7 +33,7 @@ public class Tester{
     for(int i = 0; i < 5; i++){
 
       //prints out object in given index of array
-      System.out.print(listOfStudents.get(i).toString());
+      System.out.println(listOfStudents.get(i).toString());
 
       //goes to new line
       System.out.println("");
