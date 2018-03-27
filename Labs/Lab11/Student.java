@@ -71,6 +71,23 @@ public class Student extends Person{
     classes.add(newCourse);
   }
 
+  //method to print the classes field as a list
+  public String printClasses(){
+
+    //declare and initialize needed variable
+    String list = "";
+
+    //inititate for loop
+    for(int i = 0; i < this.classes.size(); i++){
+
+      //concatonate returned strings into list
+      list += this.classes.get(i) + "\n";
+    }
+
+    //returns the value of list
+    return list;
+  }
+
   //method to create a string representation of
   //Student for printing purposes
   public String toString(){
@@ -82,6 +99,7 @@ public class Student extends Person{
             + "       Age: " + super.getAge() + "\n"
             + "    Gender: " + super.getGender() + "\n"
             + "     Major: " + this.major + "\n"
-            + "       GPA: " + this.gpa + "\n";
+            + "       GPA: " + this.gpa + "\n"
+            + "   Classes: " + this.printClasses() + "\n\n";
   }
 }
