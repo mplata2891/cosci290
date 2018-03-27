@@ -2,7 +2,7 @@
 	Mike Plata
 	CoSci 290
 
-	GamePiece class is the supertype of all other
+	 class GamePiece is the supertype of all other
 	classes in our text adventure, Last Laugh
 */
 
@@ -35,6 +35,6 @@ public class GamePiece{
 	public String toString() {
 
 		//returns class members as a string
-		return "Game Piece ID: " + this.id;
+		return "Game Piece ID: " + this.id + "\n";
 	}
 }
