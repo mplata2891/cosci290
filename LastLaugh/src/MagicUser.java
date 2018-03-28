@@ -8,7 +8,7 @@
 public class MagicUser extends Player{
 
 	//the MagicUser class has 4 class members/properties
-	private Spell[] spellBook;
+	private SpellBook book;
 	private Armor armor;
 	private Item activeItem;
 	private Item storedItem;
@@ -17,27 +17,16 @@ public class MagicUser extends Player{
 	public MagicUser(){
 
 		//creates an array and assigns it to the spellBook property
-		this.spellBook = new Spell[4];
-
-		//assigns a MysticalBlast object to spellBook array, index 0
-		this.spellBook[0] = MysticalBlast;
-
-		//uses 'for loop' to assign null to each index 1 through
-		//3 of the spellBook array
-		for(int i = 1; i < 4; i++) {
-
-			//assigns null to the indicated index
-			this.spellBook[i] = null;
-		}
+		this.book = new SpellBook();
 
 		//assigns a Cloak object to the armor property
-		this.armor = Cloak;
+		this.armor = new Cloak();
 
 		//assigns null to the activeItem property
-		this.activeItem = null;
+		this.activeItem = new null();
 
 		//assigns null to the storedItem property
-		this.storedItem = null;
+		this.storedItem = new null();
 	}
 
 	//method to assign a value to the equipedArmor property
