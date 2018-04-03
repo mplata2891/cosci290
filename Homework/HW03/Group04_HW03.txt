@@ -1,0 +1,17 @@
+GROUP 4
+
+1. Get to at least 25 points in Codewars.
+2. In your documentation.txt file:
+    - write a short summary of what your game is about. Title this section
+      "Summary".
+    - In the section where you listed out objects for your text adventure for
+      HW2, title this section "Objects Used".
+
+No other homework until I give feedback for your text adventure, in which you
+will refactor your code.
+
+/*
+  Finished
+
+  Documentation File can be found in LastLaugh folder
+*/
