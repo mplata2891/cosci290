@@ -2,13 +2,13 @@
   Mike Plata
   CoSci 290
 
-  sample of a Weapon class for Text Adventure
-  to be used by the Player class
+  Weapon class is an abstract class to be inherited by other concrete subclasses
+  Weapon class is to be used by the Player class
 */
 
 public class Weapon extends GamePiece{
 
-	//the Weapon class has 2 properties
+	//the Weapon class has 3 properties
 	private String name;
 	private String type;
 	private int attack;
@@ -72,8 +72,9 @@ public class Weapon extends GamePiece{
 	public String toString() {
 
 		//returns class members with labels as String
-		return ("Name: " + this.name + "\n"
-				+ "Type: " + this.type + "\n"
-				+ " Atk: " + this.attack "\n\n");
+		return "WEAPON -\n"
+						+ "Name: " + this.name + "\n"
+						+ "Type: " + this.type + "\n"
+						+ " Atk: " + this.attack "\n\n";
 	}
 }

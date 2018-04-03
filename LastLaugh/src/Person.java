@@ -90,8 +90,9 @@ public class Person extends GamePiece{
 	public String toString() {
 
 		//returns object properties as string
-		return "First Name: " + this.firstName + "\n"
-					+ " Last Name: " + this.lastName + "\n"
-					+ "       Age: " + this.age + "\n\n";
+		return "PERSON - \n"
+						+ "First Name: " + this.firstName + "\n"
+						+ " Last Name: " + this.lastName + "\n"
+						+ "       Age: " + this.age + "\n\n";
 	}
 }

@@ -1,9 +1,10 @@
 /*
 	Mike Plata
 	CoSci 290
+	SpellBook
 
 	SpellBook class is used exclusively by
-		the MagicUser class
+	the MagicUser class
 */
 
 import java.util.ArrayList;
@@ -78,7 +79,7 @@ public class SpellBook{
 		for(int i = 0; i < this.spells.size(); i++){
 
 			//strings concatonated into list
-			list += this.spells.get(i).toString();
+			list += (i+1) + ". " + this.spells.get(i).toString();
 		}
 
 		//return the value of list
@@ -90,7 +91,7 @@ public class SpellBook{
 	public String toString(){
 
 		//return string
-		return "Spell Book - Contents:\n"
+		return "SPELL BOOK - Contents:\n"
 						+ this.printSpells() + "\n\n";
 	}
 }

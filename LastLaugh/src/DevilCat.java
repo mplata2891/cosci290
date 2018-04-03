@@ -64,7 +64,7 @@ public class DevilCat extends Cat{
   public String toString(){
 
     //returns object as String
-    return "Bad Cat -\n"
+    return "Devil Cat -\n"
             + "   Name: " + super.getName() + "\n"
             + "  Color: " + super.getColor() + "\n"
             + "   Size: " + super.getSize() + "\n"
