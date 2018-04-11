@@ -5,11 +5,12 @@
   Level
 */
 
+import java.util.ArrayList;
 public class Level extends GamePiece{
 
   private String name;
   private int numberOfRooms;
-  private Room[] rooms;
+  private ArrayList<Room> rooms;
 
   public Level(){
 
@@ -20,7 +21,7 @@ public class Level extends GamePiece{
     this.numberOfRooms = 0;
 
     //creates a new array of type room and sets it to the room field
-    this.rooms = new Room[numberOfRooms];
+    this.rooms = new ArrayList<>[];
   }
 
   //method to return the value of the name field
@@ -49,5 +50,19 @@ public class Level extends GamePiece{
 
     //assigns the value of newNumberOfRooms to the numberOfRooms field
     this.numberOfRooms = newNumberOfRooms;
+  }
+
+  //method to return the values in the rooms field
+  public Room getRooms(){
+
+    //returns the value of the rooms fields
+    return this.rooms;
+  }
+
+  //method to set the value of the rooms field
+  public void setRooms(Room newRoom){
+
+    //adds newRoom as an element in the rooms field
+    this.rooms.add(newRoom);
   }
 }
