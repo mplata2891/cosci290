@@ -2,7 +2,7 @@
 	Mike Plata
 	CoSci 290
 
-	 class GamePiece is the supertype of all other
+	class GamePiece is the supertype of all other
 	classes in our text adventure, Last Laugh
 */
 

@@ -13,5 +13,5 @@ will refactor your code.
 /*
   Finished
 
-  Documentation File can be found in LastLaugh folder
+  Documentation File can be found in the LastLaugh folder
 */
