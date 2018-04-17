@@ -37,6 +37,8 @@ public class GameDriver{
 
     Scanner input = new Scanner(System.in); //object insantiation
 
+    Utility tool = new Utility(); //instantiate Utility for use
+
     //declare and initialize variables
     boolean alive = true;
     String confirmChoice = "choice";
@@ -46,20 +48,10 @@ public class GameDriver{
     int chanceOfSurvival = 0;
 
     //prints to the screen a splash screen with the title of the game
-    System.out.println(" ._.___________                                 ._. \n"
-                      +" | |\\_   _____/ ______ ____ _____  ______   ____| | \n"
-                      +" | | |    __)_ /  ___// ___\\\\__  \\ \\____ \\_/ __ \\ | \n"
-                      +"  \\| |        \\\\___ \\\\  \\___ / __ \\|  |_> >  ___/\\| \n"
-                      +"  __/_______  /____  >\\___  >____  /   __/ \\___  >_ \n"
-                      +"  \\/        \\/     \\/     \\/     \\/|__|        \\/\\/ \n");
+    tool.splashPageTitle();
 
     //prints to the screen the setup of the game (part of the splash screen)
-    System.out.println("\n\nIt was a long restless night. Your dreams were full of shadows\n"
-                       + "and unease. As you wake up you realize, to your horror, you're\n"
-                       + "not in the cozy room you fell asleep last night. Instead, you find\n"
-                       + "yourself on a stiff bunk in a small dark room. The room is not very\n"
-                       + "large, and you can see from wall to wall. In the dimly lit corner\n"
-                       + "there is a rusty metal door.\n");
+    tool.readFile("Test.txt");
 
     System.out.print("\nBefore you proceed, doomed wanderer, what is your name?: "); //prompts the user for input
 
@@ -106,15 +98,7 @@ public class GameDriver{
     }
 
     if(alive == false){
-      System.out.println("Wrong Move.\n"
-                        +  " _______  _______  _______  _______    _______           _______  _______ \n"
-                        +  "(  ____ \\(  ___  )(       )(  ____ \\  (  ___  )|\\     /|(  ____ \\(  ____ )\n"
-                        +  "| (    \\/| (   ) || () () || (    \\/  | (   ) || )   ( || (    \\/| (    )|\n"
-                        +  "| |      | (___) || || || || (__      | |   | || |   | || (__    | (____)|\n"
-                        +  "| | ____ |  ___  || |(_)| ||  __)     | |   | |( (   ) )|  __)   |     __)\n"
-                        +  "| | \\_  )| (   ) || |   | || (        | |   | | \\ \\_/ / | (      | (\\ (   \n"
-                        +  "| (___) || )   ( || )   ( || (____/\\  | (___) |  \\   /  | (____/\\| ) \\ \\__\n"
-                        +  "(_______)|/     \\||/     \\|(_______/  (_______)   \\_/   (_______/|/   \\__/\n");
+      tool.splashPageGameOver();
     }
       else{
         System.out.println("You're still alive, nice.");
