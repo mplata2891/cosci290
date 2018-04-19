@@ -9,6 +9,8 @@
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Utility{
@@ -16,12 +18,12 @@ public class Utility{
   /*
     This method opens a file and prints out each line
   */
-  public void readFile(String fileName){
+  public void readFile(String filename){
 
     String currentLine; //hold current line being read in File
 
     //trying to open a file to read
-    try(BufferedReader br = new BufferedReader(new FileReader(fileName))){
+    try(BufferedReader br = new BufferedReader(new FileReader(filename))){
 
       //read each line in the file until EOF
       while((currentLine = br.readLine()) != null){
@@ -73,4 +75,21 @@ public class Utility{
                       +  "| (___) || )   ( || )   ( || (____/\\  | (___) |  \\   /  | (____/\\| ) \\ \\__\n"
                       +  "(_______)|/     \\||/     \\|(_______/  (_______)   \\_/   (_______/|/   \\__/\n");
   }
+
+  public void writeFile(String filename, String content) {
+
+  	try (BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
+
+  		bw.write(content);
+
+  		System.out.println("Done");
+
+  	} catch (IOException e) {
+
+  		e.printStackTrace();
+
+  	}
+
+  }
+
 }

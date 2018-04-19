@@ -43,6 +43,7 @@ public class GameDriver{
     boolean alive = true;
     String confirmChoice = "choice";
     String command = "command";
+    String playerInfo = "";
     String playerName = "name";
     int playerAge = 0;
     int chanceOfSurvival = 0;
@@ -51,7 +52,7 @@ public class GameDriver{
     tool.splashPageTitle();
 
     //prints to the screen the setup of the game (part of the splash screen)
-    tool.readFile("Test.txt");
+    tool.readFile("TestRead.txt");
 
     System.out.print("\nBefore you proceed, doomed wanderer, what is your name?: "); //prompts the user for input
 
@@ -60,6 +61,11 @@ public class GameDriver{
     System.out.print("\nOK " + playerName + ", how old are you?: "); //prompts the user for input
 
     playerAge = input.nextInt(); //extracts input from the user
+
+    playerInfo = ("Player Name: " + playerName + "\n"
+                  + "Player Age: " + playerAge);
+
+    tool.writeFile("TestWrite.txt", playerInfo);
 
     //sends message to the user
     System.out.println("\n" + playerAge + "? You're just a child! Well, no matter. . . \n"
