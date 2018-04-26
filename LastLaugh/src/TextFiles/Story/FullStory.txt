@@ -36,6 +36,6 @@
 
 		Sitting on the floor, you look around. You're definitely in a
 		room, but it's too dark to make anything out. Maybe by exploring
-		around the room you can find some kind of clue as to what's 
+		around the room you can find some kind of clue as to what's
 		happened to	you.
 ------------
