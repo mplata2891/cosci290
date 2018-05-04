@@ -54,9 +54,9 @@ public class GameDriver{
     //prints to the screen the setup of the game (part of the splash screen)
     tool.readFile("TestRead.txt");
 
-    System.out.print("\nBefore you proceed, doomed wanderer, what is your name?: "); //prompts the user for input
+    System.out.print("\nBefore you proceed, doomed wanderer, what is your name?\n"); //prompts the user for input
 
-    playerName = input.next(); //extracts input from the user
+    playerName = tool.takeName();
 
     System.out.print("\nOK " + playerName + ", how old are you?: "); //prompts the user for input
 

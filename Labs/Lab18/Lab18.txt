@@ -1,0 +1,19 @@
+Lab Description:  GROUP 3 & 4
+
+                  Part 1
+                  Add the feature of user input validation to your text
+                  adventures. If a user enters an incorrect response to a
+                  question, give feedback on what the user needs to do to give
+                  correct input and then prompt the user to try again.
+
+                  Part 2
+                  Watch my demo on recursion.
+                  Go to codingbat --> recursion-1 --> do problems: fibonacci,
+                  bunnyEars2, and triangle
+
+/*
+  The Part 1 of this lab is continued and completed in the Lab 13 folder.
+  A method for validating input will be found in the Utility.java file.
+
+  Part 2 will be completed in CodingBat.
+*/
