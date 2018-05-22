@@ -5,6 +5,20 @@
   This Utility class houses all the custom methods
   that support my text adventure
 
+  Lab13
+  Based on the today's demo your lab requirements are:
+
+  Create a Utility class that has all your custom methods that are not related
+  to an object.
+
+  In this Utility class, have a custom method that can read a text file. This
+  text file will hold all of your story lines.
+
+  Refactor your GameDriver.java so that there are no longer any string literals.
+  
+  Create a custom SplashScreen class that houses all your different ASCII art
+  or splash screens.
+
 */
 
 //declare imports
